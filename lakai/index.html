@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta name="viewport" content="width=device-width">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="script/script.js"></script>
+</head>
+<body>
+
+    <!---------------------- TOP 버튼 ---------------------->
+    <a href="#" id="topButton">TOP</a>
+
+    <!---------------------- 첫 등장 화면 ---------------------->
+        <ul id="bigImage">
+
+            <li><img src="images/red_02.png" alt="빨간색 제품 이미지"></li>
+            <li><img src="images/black_03.png" alt="검정색 제품 이미지"></li>
+            <li><img src="images/blue_15.png" alt="파란색 제품 이미지"></li>
+            
+        </ul>
+
+    <!---------------------- 공지사항 ---------------------->
+    <div id="notification">
+
+        <ul>
+            <li><a href="#">라카이코리아 변호사 선임 지원 관련 공지사항</a></li>
+            <li><a href="#">"독도강치 비극의 역사" 국내외 영상 공개</a></li>
+            <li><a href="#">라카이코리아가 홍천 내촌중학교를 응원합니다</a></li>
+        </ul>
+
+    </div> <!-- /#notification -->
+
+    <!---------------------- 유틸리티 ---------------------->
+    <header id="header" class="page">
+        
+        <a href="#"><img src="images/logo.jpg" alt="logo"></a>
+        
+        <ul>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="https://www.instagram.com/lakaikr_official/#"><span>Instagram</span></a></li>
+            <li><a href="https://www.facebook.com/lakaikrofficial/"><span>Facebook</span></a></li>
+        </ul>
+        
+    </header> <!-- /#header -->
+    
+    <!---------------------- 내비게이션 ---------------------->    
+    <!-- 내비게이션이 fixed 상태에서는 유틸리티 버튼 추가 -->
+    <nav id="nav" class="page">
+
+        <a href="#"><span>Home Button</span></a>
+        
+        <ul id="mainMenu">
+
+            <li><a href="#">독도수분초</a></li>
+            <li><a href="#">SALE</a></li>
+            <li><a href="#">패키지</a></li>
+            <li>
+                <a href="#">신발</a>
+
+                <ul class="subMenu">
+
+                    <li><a href="#">KR</a></li>
+                    <li><a href="#">하티</a></li>
+                    <li><a href="#">퀀텀</a></li>
+                    <li><a href="#">어반</a></li>
+                    <li><a href="#">로스터</a></li>
+                    <li><a href="#">슬리퍼</a></li>
+                    <li><a href="#">인솔</a></li>
+
+                </ul> <!-- /.subMenu -->
+
+            </li>
+            <li>
+                <a href="#">패션</a>
+            
+                <ul class="subMenu">
+
+                    <li><a href="#">상의</a></li>
+                    <li><a href="#">하의</a></li>
+                    <li><a href="#">아우터</a></li>
+                    <li><a href="#">모자</a></li>
+                    <li><a href="#">가방</a></li>
+                    <li><a href="#">이너웨어</a></li>
+                    <li><a href="#">액세서리</a></li>
+
+                </ul> <!-- /.subMenu -->
+                
+            </li>
+            <li>
+                <a href="#">ANOTHER</a>
+            
+                <ul class="subMenu">
+
+                    <li><a href="#">어린이 의류</a></li>
+                    <li><a href="#">반려용품</a></li>
+
+                </ul> <!-- /.subMenu -->
+                
+            </li>
+            <li><a href="#">콜라보레이션</a></li>
+            <li>
+                <a href="#">커뮤니티</a>
+                
+                
+                <ul class="subMenu">
+
+                    <li><a href="#">브랜드스토리</a></li>
+                    <li><a href="#">상품후기</a></li>
+                    <li><a href="#">라카이가만난사람들</a></li>
+                    <li><a href="#">ARCHIVE</a></li>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">고객센터</a></li>
+
+                </ul> <!-- /.subMenu -->
+            </li>
+
+        </ul> <!-- /#mainMenu -->
+
+        <!-- 사이드바로 제작 -->
+        <button tyep="button"><span>Utility sidebar Button</span></button>
+
+        <ul id="sidebar">
+
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="https://www.instagram.com/lakaikr_official/#"><span>Instagram</span></a></li>
+            <li><a href="https://www.facebook.com/lakaikrofficial/"><span>Facebook</span></a></li>
+
+        </ul> <!-- /#sidebar -->
+        
+    </nav> <!-- /#nav -->
+
+    <!---------------------- 소개글 ---------------------->
+    <div id="content" class="page">
+
+        <div>
+
+            <div>
+                <p>역사를 기록하는</p>
+                <p>패션브랜드</p>
+            </div>
+            <img src="images/logo2_21.jpg" alt="logo">
+            <p>라카이코리아</p>
+            
+        </div>
+
+    </div> <!-- /#content -->
+
+    <!---------------------- 이미지 슬라이드 ---------------------->
+    <div id="imageSlide" class="page margin">
+
+        <div class="center">
+            
+            <ul>
+                <li><a href="#"><img src="images/slide1.png" alt="Image Slide1"></a></li>
+                <li><a href="#"><img src="images/slide2.png" alt="Image Slide2"></a></li>
+                <li><a href="#"><img src="images/slide3.png" alt="Image Slide3"></a></li>
+            </ul>
+            
+            <button type="button" id="slidePrev"><span>Image Slide Prev Button</span></button>
+            <button type="button" id="slideNext"><span>Image Slide Next Button</span></button>
+            
+        </div> <!-- /.center-->
+
+    </div> <!-- /#imageContainer -->
+
+    <!---------------------- 독도수분초 ---------------------->
+    <div id="cosmetics" class="page margin">
+
+        <h2>독도수분초</h2>
+        
+        <div>
+            
+            <ul>
+                <li>
+                    <ul class="tabText on">
+                        <li>수분 에이어링</li>
+                        <li>각질 제거 효과</li>
+                        <li>민감한 피부에도 사용 가능</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="tabText">
+                        <li>속은 촉촉, 겉은 산뜻</li>
+                        <li>피부 진정 효과</li>
+                        <li>수면팩으로 사용 가능</li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <ul id="tabButton">
+                <li data-index="0" class="on">
+                    토너
+                    <ul>
+                        <li>
+                            <a href="#" class="tabImage on"><img src="images/banner2.png" alt="Toner"></a>
+                        </li>
+                    </ul>
+                </li>
+                <li data-index="1">
+                    크림
+                    <ul>
+                        <li>
+                            <a href="#" class="tabImage"><img src="images/banner1.png" alt="Cream"></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            
+            
+        </div>
+
+    </div> <!-- /#cosmetics -->
+
+    <!---------------------- 신발 ---------------------->
+    <div id="shoes" class="page margin">
+
+        <h2>신발</h2>
+        
+        <div>
+            
+            <ul id="Simage">
+                
+                <li class="on"><a href="#"><img src="images/shoes1.png" alt="KR"></a></li>
+                <li><a href="#"><img src="images/shoes2.png" alt="하티"></a></li>
+                <li><a href="#"><img src="images/shoes3.png" alt="퀀텀"></a></li>
+                <li><a href="#"><img src="images/shoes4.png" alt="어반"></a></li>
+                <li><a href="#"><img src="images/shoes5.png" alt="로스터"></a></li>
+                <li><a href="#"><img src="images/shoes6.png" alt="슬리퍼"></a></li>
+                <li><a href="#"><img src="images/shoes7.png" alt="인솔"></a></li>
+                
+            </ul> <!-- /#Simage -->
+
+            <ul id="Smenu">
+                
+                <li data-index="0" class="on">KR</li>
+                <li data-index="1">하티</li>
+                <li data-index="2">퀀텀</li>
+                <li data-index="3">어반</li>
+                <li data-index="4">로스터</li>
+                <li data-index="5">슬리퍼</li>
+                <li data-index="6">인솔</li>
+                
+            </ul> <!-- /#Smenu -->
+            
+            <ul id="Sproduct">
+                
+                <li>
+                    <ul class="shoes on">
+
+                        <li><img src="images/sh1_15.jpg" alt="KR 1"></li>
+                        <li><img src="images/sh1_16.jpg" alt="KR 2"></li>
+                        <li><img src="images/sh1_17.jpg" alt="KR 3"></li>
+                        <li><img src="images/sh1_18.jpg" alt="KR 4"></li>
+                        <li><img src="images/sh1_19.jpg" alt="KR 5"></li>
+                        <li><img src="images/sh1_20.jpg" alt="KR 6"></li>
+                        <li><img src="images/sh1_21.jpg" alt="KR 7"></li>
+                        <li><img src="images/sh1_22.jpg" alt="KR 8"></li>
+
+                    </ul>
+                </li>
+                
+                <li>
+                    <ul class="shoes">
+
+                        <li><img src="images/sh2_15.jpg" alt="하티 1"></li>
+                        <li><img src="images/sh2_16.jpg" alt="하티 2"></li>
+                        <li><img src="images/sh2_17.jpg" alt="하티 3"></li>
+                        <li><img src="images/sh2_18.jpg" alt="하티 4"></li>
+                        <li><img src="images/sh2_19.jpg" alt="하티 5"></li>
+                        <li><img src="images/sh2_20.jpg" alt="하티 6"></li>
+                        <li><img src="images/sh2_21.jpg" alt="하티 7"></li>
+                        <li><img src="images/sh2_22.jpg" alt="하티 8"></li>
+
+                    </ul>
+                </li>
+                
+                <li>
+                    <ul class="shoes">
+
+                        <li><img src="images/sh3_15.jpg" alt="퀀텀 1"></li>
+                        <li><img src="images/sh3_16.jpg" alt="퀀텀 2"></li>
+                        <li><img src="images/sh3_17.jpg" alt="퀀텀 3"></li>
+                        <li><img src="images/sh3_18.jpg" alt="퀀텀 4"></li>
+                        <li><img src="images/sh3_19.jpg" alt="퀀텀 5"></li>
+                        <li><img src="images/sh3_20.jpg" alt="퀀텀 6"></li>
+                        <li><img src="images/sh3_21.jpg" alt="퀀텀 7"></li>
+                        <li><img src="images/sh3_22.jpg" alt="퀀텀 8"></li>
+                        
+                    </ul>
+                </li>
+                
+                <li>
+                    <ul class="shoes">
+
+                        <li><img src="images/sh4_15.jpg" alt="어반 1"></li>
+                        <li><img src="images/sh4_16.jpg" alt="어반 2"></li>
+                        <li><img src="images/sh4_17.jpg" alt="어반 3"></li>
+                        <li><img src="images/sh4_18.jpg" alt="어반 4"></li>
+                        <li><img src="images/sh4_19.jpg" alt="어반 5"></li>
+                        <li><img src="images/sh4_20.jpg" alt="어반 6"></li>
+                        <li><img src="images/sh4_21.jpg" alt="어반 7"></li>
+                        <li><img src="images/sh4_22.jpg" alt="어반 8"></li>
+
+                    </ul>
+                </li>
+                
+                <li>
+                    <ul class="shoes">
+
+                        <li><img src="images/sh5_15.jpg" alt="로스터 1"></li>
+                        <li><img src="images/sh5_16.jpg" alt="로스터 2"></li>
+                        <li><img src="images/sh5_17.jpg" alt="로스터 3"></li>
+                        <li><img src="images/sh5_18.jpg" alt="로스터 4"></li>
+                        <li><img src="images/sh5_19.jpg" alt="로스터 5"></li>
+                        <li><img src="images/sh5_20.jpg" alt="로스터 6"></li>
+                        <li><img src="images/sh5_21.jpg" alt="로스터 7"></li>
+                        <li><img src="images/sh5_22.jpg" alt="로스터 8"></li>
+
+                    </ul>
+                </li>
+                
+                <li>
+                    <ul class="shoes">
+
+                        <li><img src="images/sh6_15.jpg" alt="슬리퍼 1"></li>
+                        <li><img src="images/sh6_16.jpg" alt="슬리퍼 2"></li>
+                        <li><img src="images/sh6_17.jpg" alt="슬리퍼 3"></li>
+                        <li><img src="images/sh6_18.jpg" alt="슬리퍼 4"></li>
+                        <li><img src="images/sh6_19.jpg" alt="슬리퍼 5"></li>
+                        <li><img src="images/sh6_20.jpg" alt="슬리퍼 6"></li>
+                        <li><img src="images/sh6_21.jpg" alt="슬리퍼 7"></li>
+                        <li><img src="images/sh6_22.jpg" alt="슬리퍼 8"></li>
+
+                    </ul>
+                </li>
+                
+                <li>
+                    <ul class="shoes">
+
+                        <li><img src="images/sh7_15.jpg" alt="인솔 1"></li>
+                        <li><img src="images/sh7_16.jpg" alt="인솔 2"></li>
+                        <li><img src="images/sh7_17.jpg" alt="인솔 3"></li>
+                        <li><img src="images/sh7_18.jpg" alt="인솔 4"></li>
+                        <li><img src="images/sh7_19.jpg" alt="인솔 5"></li>
+                        <li><img src="images/sh7_20.jpg" alt="인솔 6"></li>
+                        <li><img src="images/sh7_21.jpg" alt="인솔 7"></li>
+                        <li><img src="images/sh7_22.jpg" alt="인솔 8"></li>
+                        
+                    </ul>
+                </li>
+                
+                
+            </ul> <!-- /Sproduct -->
+            
+        </div>
+
+    </div> <!-- /#shoes -->
+
+    <!---------------------- 액세서리&컵 ---------------------->
+    <div id="container">
+        
+        <div id="accessories" class="page margin">
+            
+            <h2>액세서리 & 컵</h2>
+            
+            <div>
+                
+                <ul id="Aimage">
+                    
+                    <li>
+                        <ul class="images on">
+                            <li><a href="#"><img src="images/a1_36.jpg" alt="팔찌1"></a></li>
+                            <li><a href="#"><img src="images/a1_37.jpg" alt="팔찌2"></a></li>
+                            <li><a href="#"><img src="images/a1_39.jpg" alt="팔찌3"></a></li>
+                        <li><a href="#"><img src="images/a1_40.jpg" alt="팔찌4"></a></li>
+                    </ul>
+                    </li>
+                    <li>
+                        <ul class="images">
+                            <li><a href="#"><img src="images/a2_36.jpg" alt="키링1"></a></li>
+                            <li><a href="#"><img src="images/a2_37.jpg" alt="키링2"></a></li>
+                            <li><a href="#"><img src="images/a2_39.jpg" alt="키링3"></a></li>
+                            <li><a href="#"><img src="images/a2_40.jpg" alt="키링4"></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="images">
+                            <li><a href="#"><img src="images/a3_36.jpg" alt="글라스컵1"></a></li>
+                            <li><a href="#"><img src="images/a3_37.jpg" alt="글라스컵2"></a></li>
+                            <li><a href="#"><img src="images/a3_39.jpg" alt="글라스컵3"></a></li>
+                         <li><a href="#"><img src="images/a3_40.jpg" alt="글라스컵4"></a></li>
+                     </ul>
+                  </li>
+                  <li>
+                        <ul class="images">
+                            <li><a href="#"><img src="images/a4.jpg" alt="폰케이스1"></a></li>
+                            <li><a href="#"><img src="images/a4-2.jpg" alt="폰케이스2"></a></li>
+                            <li><a href="#"><img src="images/a4-3.jpg" alt="폰케이스3"></a></li>
+                            <li><a href="#"><img src="images/a4-4.jpg" alt="폰케이스4"></a></li>
+                        </ul>
+                 </li>
+                
+                </ul> <!-- /#Aimage -->
+            
+              <ul id="Amenu">
+
+                  <li data-index="0"><img src="images/accessories1.png" alt="팔찌"></li>
+                  <li data-index="1"><img src="images/accessories2.png" alt="키링"></li>
+                  <li data-index="2"><img src="images/accessories3.png" alt="글라스컵"></li>
+                  <li data-index="3"><img src="images/accessories4.png" alt="폰케이스"></li>
+
+              </ul> <!--/- /#Amenu -->
+            
+            </div>
+        
+        </div> <!-- /#accessories -->
+
+    </div> <!-- /#container -->
+    
+    <!---------------------- 옷 ---------------------->
+    <div id="clothes" class="page margin">
+
+        <h2>Clothes</h2>
+        
+        <div>
+            
+            <ul id="Cmenu">
+                
+                <li data-index="0" class="on">아우터</li>
+                <li data-index="1">셔츠</li>
+                <li data-index="2">맨투맨</li>
+                <li data-index="3">후드티</li>
+                
+            </ul> <!-- /#Cmenu -->
+            
+            <ul id="blackImage">
+                
+                <li class="on">
+                    <img src="images/c1-2_47.jpg" alt="아우터">
+                    <ul class="Cimage">
+                        <li class="on"><a href="#"><img src="images/c1.png" alt="아우터"></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <img src="images/c3-2_47.jpg" alt="셔츠">
+                    <ul class="Cimage">
+                        <li><a href="#"><img src="images/c3.png" alt="셔츠"></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <img src="images/c4-2_47.jpg" alt="맨투맨">
+                    <ul class="Cimage">
+                        <li><a href="#"><img src="images/c4.png" alt="맨투맨"></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <img src="images/c5-2_47.jpg" alt="후드티">
+                    <ul class="Cimage">
+                        <li><a href="#"><img src="images/c5.png" alt="후드티"></a></li>
+                    </ul>
+                </li>
+                
+            </ul> <!-- /#blackImage -->
+            
+        </div>
+
+    </div> <!-- /#clothes -->
+
+    <!---------------------- 어린이 의류 ---------------------->
+    <div id="kids" class="page margin">
+
+        <h2>어린이 의류</h2>
+        
+        <div>
+
+            <div id="Kimage">
+                
+                <ul>
+                    
+                    <li><a href="#"><img src="images/k1_60.jpg" alt="어린이 의류 상의1"></a></li>
+                    <li><a href="#"><img src="images/k2_60.jpg" alt="어린이 의류 상의2"></a></li>
+                    <li><a href="#"><img src="images/k3_60.jpg" alt="어린이 의류 상의3"></a></li>
+                    <li><a href="#"><img src="images/k4_60.jpg" alt="어린이 의류 상의4"></a></li>
+                    <li><a href="#"><img src="images/k5_60.jpg" alt="어린이 의류 상의5"></a></li>
+                    <li><a href="#"><img src="images/k6_60.jpg" alt="어린이 의류 상의6"></a></li>
+                    
+                </ul>
+
+            </div> <!-- /#Kimage -->
+            
+            <div id="Kthumbnail">
+
+                <ul>
+                    
+                    <li data-index="0"><img src="images/kide_55.jpg" alt="어린이 의류 상의 썸네일1"></li>
+                    <li data-index="1"><img src="images/kide_57.jpg" alt="어린이 의류 상의 썸네일2"></li>
+                    <li data-index="2"><img src="images/kide2_55.jpg" alt="어린이 의류 상의 썸네일3"></li>
+                    <li data-index="3"><img src="images/kide2_57.jpg" alt="어린이 의류 상의 썸네일4"></li>
+                    <li data-index="4"><img src="images/kide2_59.jpg" alt="어린이 의류 상의 썸네일5"></li>
+                    <li data-index="5"><img src="images/kide2_61.jpg" alt="어린이 의류 상의 썸네일6"></li>
+                    
+                </ul>
+
+            </div> <!-- /#Kthumbnail -->
+            
+        </div>
+
+    </div> <!-- /#kide -->
+
+    <!---------------------- 유튜브 영상 ---------------------->    
+    <div id="media" class="page margin">
+
+        <h2>MEDIA</h2>
+        
+        <iframe src="https://www.youtube.com/embed/QrOF_SwVtkE?list=TLGG2HZcBYeHNyAwMzEyMjAyNA" title="독도 강치- 비극의 역사" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    </div> <!-- /#media -->
+
+    <!---------------------- SNS ---------------------->
+    <div id="sns" class="page margin">
+
+        <h2>SNS</h2>
+        
+        <div>
+            
+            <ul class="snsL_R">
+                <li>
+                    <a href="https://www.instagram.com/p/DAcQzsevWAa/" class="SNSLeft"><img src="images/s1-10.jpg" alt="SNS Image Left"></a>
+                    <ul>
+                        <li><a href="https://www.instagram.com/p/DAcQzsevWAa/"><img src="images/snsicon.png" alt="instagram"></a></li>
+                        <li><a href="https://www.facebook.com/lakaikrofficial/?checkpoint_src=any"><img src="images/snsicon2.png" alt="facebook"></a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="snsL_R">
+                <li>
+                    <a href="https://www.instagram.com/p/C-t0v4_hmZz/" class="SNSRight"><img src="images/s1-11.jpg" alt="SNS Image Right"></a>
+                    <ul>
+                        <li><a href="https://www.instagram.com/p/C-t0v4_hmZz/"><img src="images/snsicon.png" alt="instagram"></a></li>
+                        <li><a href="https://www.facebook.com/share/p/reVoGDPWSLrRrgqF/"><img src="images/snsicon2.png" alt="facebook"></a></li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <ul class="snsImage SNS1">
+                <li>
+                    <a href="https://www.instagram.com/p/DAVKoj7hF7F/?img_index=1"><img src="images/s1-1.jpg" alt="SNS Image1"></a>
+                    <ul>
+                        <li><a href="https://www.instagram.com/p/DAVKoj7hF7F/?img_index=1"><img src="images/snsicon.png" alt="instagram"></a></li>
+                        <li><a href="https://www.facebook.com/share/p/pdLsKn7P6MtN7w6n/"><img src="images/snsicon2.png" alt="facebook"></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/p/DAIVLTyhAUn/?img_index=1"><img src="images/s1-2.jpg" alt="SNS Image2"></a>
+                    <ul>
+                        <li><a href="https://www.instagram.com/p/DAIVLTyhAUn/?img_index=1"><img src="images/snsicon.png" alt="instagram"></a></li>
+                        <li><a href="https://www.facebook.com/share/p/c7r9MeE8AddW1Dfn/"><img src="images/snsicon2.png" alt="facebook"></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/p/DAHubJ7BVWJ/?img_index=1"><img src="images/s1-3.jpg" alt="SNS Image3"></a>
+                    <ul>
+                        <li><a href="https://www.instagram.com/p/DAHubJ7BVWJ/?img_index=1"><img src="images/snsicon.png" alt="instagram"></a></li>
+                        <li><a href="https://www.facebook.com/share/p/Y1yscGiSMc6y8pZ3/"><img src="images/snsicon2.png" alt="facebook"></a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="snsImage SNS2">
+                <li>
+                    <a href="https://www.instagram.com/p/C_w8sU7Bz_a/?img_index=1"><img src="images/s1-4.jpg" alt="SNS Image4"></a>
+                    <ul>
+                        <li><a href="https://www.instagram.com/p/C_w8sU7Bz_a/?img_index=1"><img src="images/snsicon.png" alt="instagram"></a></li>
+                        <li><a href="https://www.facebook.com/share/p/gG1Tx1L5Nsk9bJGd/"><img src="images/snsicon2.png" alt="facebook"></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/p/C_ue0BcBPxA/"><img src="images/s1-5.jpg" alt="SNS Image5"></a>
+                    <ul>
+                        <li><a href="https://www.instagram.com/p/C_ue0BcBPxA/"><img src="images/snsicon.png" alt="instagram"></a></li>
+                        <li><a href="https://www.facebook.com/share/p/9oj1xoW2qYj7ExAH/"><img src="images/snsicon2.png" alt="facebook"></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/p/C_kFlP9BlNl/"><img src="images/s1-6.jpg" alt="SNS Image6"></a>
+                    <ul>
+                        <li><a href="https://www.instagram.com/p/C_kFlP9BlNl/"><img src="images/snsicon.png" alt="instagram"></a></li>
+                        <li><a href="https://www.facebook.com/share/p/KNzoZR8sF1owgPa7/"><img src="images/snsicon2.png" alt="facebook"></a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="snsImage SNS3">
+                <li>
+                    <a href="https://www.instagram.com/p/C_hoa0lBQfN/?img_index=1"><img src="images/s1-7.jpg" alt="SNS Image7"></a>
+                    <ul>
+                        <li><a href="https://www.instagram.com/p/C_hoa0lBQfN/?img_index=1"><img src="images/snsicon.png" alt="instagram"></a></li>
+                        <li><a href="https://www.facebook.com/share/p/q6cATa4RmaWuKXBE/"><img src="images/snsicon2.png" alt="facebook"></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/p/C_Pgy5ABeP5/"><img src="images/s1-8.jpg" alt="SNS Image8"></a>
+                    <ul>
+                        <li><a href="https://www.instagram.com/p/C_Pgy5ABeP5/"><img src="images/snsicon.png" alt="instagram"></a></li>
+                        <li><a href="https://www.facebook.com/share/p/U7PTQB5KNtsodJjH/"><img src="images/snsicon2.png" alt="facebook"></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/p/C-9Fc2IKiy1/"><img src="images/s1-9.jpg" alt="SNS Image9"></a>
+                    <ul>
+                        <li><a href="https://www.instagram.com/p/C-9Fc2IKiy1/"><img src="images/snsicon.png" alt="instagram"></a></li>
+                        <li><a href="https://www.facebook.com/share/v/3VfFhgod1sKKdoX8/"><img src="images/snsicon2.png" alt="facebook"></a></li>
+                    </ul>
+                </li>
+            </ul>
+            
+        </div>
+
+    </div> <!-- /#sns -->
+
+    <!---------------------- 푸터 ---------------------->
+    <footer id="footer">
+
+        <div>
+
+            <ul>
+                <li><strong>COMPANY INFO</strong></li>
+                <li>상호명 주식회사 라카이코리아 | 대표자 김재본 | 대표전화 02-6956-7323</li>
+                <li>개인정보관리책임자 김재본(lakai_official@naver.com)</li>
+                <li>통신판매업신고 제2023-경기김포-0668호</li>
+                <li>사업자등록번호 720-81-00985 [사업자정보확인]</li>
+                <li>주소 10030 경기 김포시 통진읍 가현로166번길 9 다동2층</li>
+                <li>결제대금예치업 등록번호 00-000-00000 [서비스가입사실확인]</li>
+                <li>호스팅 제공자 카페24(주). | COPYRIGHT &copy; 라카이코리아 ALL RIGHT RESETVED.</li>
+            </ul>
+
+            <ul>
+                <li>
+                    <ul class="T1">
+                        <li><strong>CUSTOMER CENTER</strong></li>
+                        <li>02-6956-7323</li>
+                        <li>월-금 AM 10:00 - PM 17:00</li>
+                        <li>점심시간 PM 13:00 - PM 14:00</li>
+                        <li>주말 및 공휴일은 휴무</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="T2">
+                        <li><strong>계좌정보</strong></li>
+                        <li>국민은행 360101-04-173100</li>
+                        <li>예금주 라카이코리아</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul>
+                <li><strong>SHOP GULDE</strong></li>
+                <li>HOME</li>
+                <li>COMPANY</li>
+                <li>AGREEMENT</li>
+                <li>PRIVACY</li>
+                <li>GUIDE</li>
+            </ul>
+
+            <ul>
+                <li><strong>MYPAGE</strong></li>
+                <li>ORDER</li>
+                <li>WISH LIST</li>
+                <li>MILEAGE</li>
+                <li>COUPON</li>
+                <li>LIKE</li>
+            </ul>
+
+            <ul>
+                <li><strong>COMMUNITY</strong></li>
+                <li>상품 사용후기</li>
+                <li>고객센터</li>
+                <li>공지사항</li>
+            </ul>
+
+        </div> <!-- /.center -->
+
+    </footer> <!-- /#footer -->
+
+</body>
+</html>

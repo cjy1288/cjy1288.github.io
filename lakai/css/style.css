@@ -1,0 +1,982 @@
+/* --------------------------------- 전체 공통 설정 --------------------------------- */
+.page {
+    width: 1200px;
+    margin: 0 auto;
+}
+.page.margin {
+    margin-bottom: 360px;
+}
+body {
+    color: #1e1e1e;
+    overflow-x: hidden;
+}
+
+/* 제목 폰트 설정 */
+.page > h2 {
+    font-family: '태나다체', sans-serif;
+    font-size: 70px;
+    font-weight: 900;
+    margin-bottom: 120px;
+}
+
+/* TOP 버튼 */
+#topButton {
+    display: block;
+    display: block;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 80px;
+    background-color: #ecd9d9;
+    border-radius: 50%;
+    line-height: 80px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+
+    font-weight: bold;
+    font-size: 25px;
+    z-index: 100;
+}
+#topButton:hover {
+    color: #face66;
+    background-color: #a5adb6;
+}
+
+
+/* --------------------------------- 첫 등장 화면 --------------------------------- */
+#bigImage {
+    position: relative;
+    width: 1842px;
+    margin: 0 auto;
+}
+#bigImage > li {
+    position: absolute;
+    z-index: 100;
+    overflow: hidden;
+
+    opacity: 0;
+    visibility: hidden;
+}
+#bigImage > li > img {
+    display: block;
+}
+#bigImage > li:nth-child(1) {
+    top: 0;
+    left: 18.3%;
+}
+#bigImage > li:nth-child(2) {
+    top: 0;
+    left: 46.8%;
+    width: 1026px;
+}
+#bigImage > li:nth-child(3) {
+    top: 550px;
+    left: 50%;
+    transform: translatex(-50%);
+    height: 416px;
+}
+/* 모션*/
+#bigImage > li:nth-child(1) > img {
+    margin-left: -930px;
+    transition-duration: 400ms;
+}
+#bigImage > li:nth-child(2) > img {
+    margin-left: 1026px;
+    transition-duration: 600ms;
+}
+#bigImage > li:nth-child(3) > img {
+    margin-top: 416px;
+    transition-duration: 800ms;
+}
+/* 활성화 */
+#bigImage > li.on {
+    opacity: 1;
+    visibility: visible;
+}
+#bigImage > li:nth-child(1).on > img { margin-left: 0; }
+#bigImage > li:nth-child(2).on > img { margin-left: 0; }
+#bigImage > li:nth-child(3).on > img { margin-top: 0; }
+
+
+/* --------------------------------- 공지사항 --------------------------------- */
+#notification {
+    height: 40px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #a5adb6;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+#notification > ul {
+    width: 1200px;
+    margin: 0 auto;
+    height: 300%;
+}
+#notification > ul > li {
+    height: calc(100% / 3);
+}
+#notification > ul > li > a {
+    display: block;
+    height: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    line-height: 40px;
+
+    font-family: '나눔고딕', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+
+/* --------------------------------- 유틸리티 --------------------------------- */
+#header {
+    height: 100px;
+    margin-top: 40px;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+/* 로고 */
+#header > a {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#header > a > img {
+    display: block;
+}
+
+#header > ul {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+#header > ul > li > a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+
+    font-family: 'G마켓 산스 TTF Medium', sans-serif;
+    font-size: 17px;
+    line-height: 30px;
+}
+#header > ul > li:hover > a {
+    border-bottom: 1px solid #1e1e1e;
+}
+#header > ul > li > a > span {
+    position: absolute;
+    display: block;
+    width: 1px; height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+#header > ul > li:nth-child(3) > a, #header > ul > li:nth-child(4) > a {
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+#header > ul > li:nth-child(3) > a {
+    background-image: url('../images/sns.jpg');
+}
+#header > ul > li:nth-child(4) > a {
+    background-image: url('../images/sns2.jpg');
+}
+#header > ul > li:not(:first-child) {
+    margin-left: 15px;
+}
+
+
+/* --------------------------------- 내비게이션 --------------------------------- */
+#nav {
+    display: flex;
+    position: absolute;
+    z-index: 10;
+    justify-content: space-between;
+    background-color: #fff;
+    left: 50%;
+    transform: translatex(-50%);
+}
+/* 내비게이션 고정 */
+#nav.fixed {
+    position: fixed;
+    top: 40px;
+    left: 50%;
+    transform:translatex(-50%);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+#mainMenu {
+    display: flex;
+}
+#mainMenu > li > a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    line-height: 50px;
+    font-family: 'G마켓 산스 TTF Medium', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+#mainMenu > li:not(:first-child) {
+    margin-left: 50px;
+}
+/* 버튼들 */
+#nav > button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#nav > button > span, #nav > a > span {
+    position: absolute;
+    display: block;
+    width: 1px; height: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+#nav > a {
+    width: 79px;
+    height: 42px;
+    background-image: url('../images/logo_button.jpg');
+}
+#nav > button {
+    width: 80px;
+    height: 50px;
+    background-image: url('../images/menu_button.jpg');
+    cursor: pointer;
+}
+/* 서브 메뉴 */
+#mainMenu > li {position: relative; }
+.subMenu {
+    position: absolute;
+    top: 105%;
+    left: 0;
+    
+    background-color: #fff;
+    border: 1px solid #acb2bb;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    display: none;
+}
+.subMenu > li > a {
+    display: block;
+    white-space: nowrap;
+    text-decoration: none;
+    color: inherit;
+    line-height: 30px;
+    padding: 10px;
+    padding-right: 30px;
+}
+.subMenu > li:hover > a {
+    background-color: #acb2bb;
+    color: #fff;
+}
+.subMenu.on {
+    display: block
+}
+#mainMenu > li:hover > a {
+    color: #face66;
+}
+/* 사이드바 */
+#sidebar {
+    position: absolute;
+    top: 105%;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #acb2bb;
+    width: 250px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+
+    display: none;
+}
+#sidebar > li > a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    line-height: 50px;
+    font-family: 'G마켓 산스 TTF Medium', sans-serif;
+    font-size: 17px;
+}
+#sidebar > li { position: relative; }
+#sidebar > li > a > span {
+    display: block;
+    padding-left: 50px;
+}
+#sidebar > li:nth-child(3) > a, #sidebar > li:nth-child(4) > a {
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+#sidebar > li:nth-child(3) > a {
+    background-image: url('../images/sns.jpg');
+}
+#sidebar > li:nth-child(4) > a {
+    background-image: url('../images/sns2.jpg');
+}
+#sidebar > li:nth-child(3) {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+#sidebar > li:nth-child(4) {
+    padding-bottom: 15px;
+}
+#sidebar > li:hover > a, #sidebar > li:hover > a > span {
+    color: #face66;
+}
+#sidebar.on {
+    display: block;
+}
+
+
+/* --------------------------------- 소개글 --------------------------------- */
+#content {
+    margin-top: 300px;
+    margin-bottom: 400px;
+}
+#content > div {
+    display: flex;
+    justify-content: center;
+
+    font-size: 25px;
+    line-height: 40px;
+}
+#content > div > img { margin: 0 50px; }
+#content > div > p {
+    padding-top: 80px;
+    
+    overflow: hidden;
+}
+#content > div > div > p:first-child { padding-right: 70px; }
+#content > div > div > p:last-child { text-align: right; }
+
+
+/* --------------------------------- 이미지 슬라이드 --------------------------------- */
+#imageSlide { margin-top: 190px; }
+#imageSlide > div {
+    width: 1200px;
+    position: relative;
+
+    overflow: hidden;
+}
+#imageSlide > div > ul {
+    display: flex;
+    width: 300%;
+}
+#imageSlide > div > ul > li { width: calc(100% / 3); }
+#imageSlide > div > ul > li > a {
+    width: 100%;
+    display: block;
+}
+#imageSlide > div > ul > li > a > img { display: block; }
+/* 버튼 */
+#slidePrev, #slideNext {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: absolute;
+    bottom: 30px;
+    width: 50px;
+    height: 42px;
+
+    cursor: pointer;
+    opacity: 0.2;
+    transition-duration: 100ms;
+}
+#slidePrev:hover, #slideNext:hover { opacity: 1; }
+#imageSlide > div > button > span {
+    position: absolute;
+    display: block;
+    width: 1px; height: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+#slidePrev {
+    background-image: url('../images/button.png');
+    left: 450px;
+}
+#slideNext {
+    background-image: url('../images/button2.png');
+    right: 450px;
+}
+
+
+/* --------------------------------- 독도수분초 --------------------------------- */
+/* 설명란 */
+.tabText > li, #tabButton > li {
+    font-family: '나눔고딕', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+}
+#cosmetics > div {
+    display: flex;
+    justify-content: space-between;
+    
+    position: relative;
+}
+.tabText {
+    height: 500px;
+    overflow: hidden;
+    position: absolute;
+    padding-top: 100px;
+    visibility: hidden;
+}
+.tabText > li {
+    position: absolute;
+    width: 500px;
+    background-color: #ecd9d9;
+    border-radius: 15px 15px 0 15px;
+    line-height: 80px;
+    text-align: center;
+    
+    opacity: 0;
+    margin-top: 50px;
+    transition-duration: 500ms;
+}
+.tabText > li:not(:first-child) { margin-top: 80px; }
+.tabText > li::after {
+    content: "";
+    
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    
+    width: 0;
+    height: 0;
+    border: 30px solid transparent;
+    border-right-color: #ecd9d9;
+}
+
+/* 제품 이미지 */
+#tabButton {
+    position: relative;
+    display: flex;
+    text-align: center;
+    line-height: 50px;
+    height: 50px;
+}
+#tabButton > li {
+    display: block;
+    width: 130px;
+    background-color: #efecec;
+    color: #d3d1d1;
+    cursor: pointer;
+}
+#tabButton > li:first-child { border-radius: 5px 0 0 0; }
+#tabButton > li:last-child { border-radius: 0 5px 0 0; }
+.tabImage {
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #fff;
+}
+.tabImage > img {
+    width: 500px;
+    display: block;
+    border: 5px solid #ecd9d9;
+    border-radius: 5px 0 5px 5px;
+    box-sizing: border-box;
+    display: none;
+}
+/* 활설화 상태 */
+#tabButton > li.on {
+    background-color: #ecd9d9;
+    color: inherit;
+    cursor: default;
+    margin-top: 0;
+}
+.tabImage.on > img { display: block; }
+.tabText.on { 
+    position: static;
+    visibility: visible;
+}
+.tabText.on > li {
+    position: relative;
+    opacity: 1;
+    margin-top: 0;
+}
+.tabText.on > li:not(:first-child) {
+    margin-top: 80px;
+}
+
+
+/* --------------------------------- 신발 --------------------------------- */
+/* 제품 이미지 목록 */
+#shoes > div {
+    display: flex;
+    justify-content: space-between;
+}
+#Simage {
+    position: relative;
+    margin-left: -80px;
+    margin-top: 50px;
+}
+#Simage::after {
+    content: "";
+
+    position: absolute;
+    top: -50px;
+    right: -50px;
+
+    width: 275px;
+    height: 550px;
+    background-image: url('../images/semicircle_15.jpg');
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+#Simage > li {
+    background-color: #ebebea;
+    padding: 10px;
+    border-radius: 50%;
+
+    display: none;
+}
+#Simage > li > a { display: block; }
+
+/* 제품 목록 텍스트 */
+#Smenu {
+    position: relative;
+    left: -30px;
+    top: 0;
+    font-family: 'G마켓 산스 TTF Medium', sans-serif;
+    font-size: 25px;
+    white-space: nowrap;
+    
+    z-index: 1;
+}
+#Smenu > li {
+    display: block;
+    opacity: 0.6;
+    
+    cursor: pointer;
+}
+#Smenu > li:hover { opacity: 1; }
+#Smenu > li:nth-child(1), #Smenu > li:nth-child(7) {
+    margin-left: -130px;
+    line-height: 50px;
+}
+#Smenu > li:nth-child(2), #Smenu > li:nth-child(6) {
+    margin-left: -60px;
+    line-height: 90px;
+}
+#Smenu > li:nth-child(3), #Smenu > li:nth-child(5) {
+    margin-left: -20px;
+    line-height: 90px;
+}
+#Smenu > li:nth-child(4) { line-height: 90px; }
+
+/* 제품 이미지 */
+#Sproduct { width: 500px; }
+.shoes {
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+.shoes > li { overflow: hidden; }
+.shoes > li > img {
+    display: block;
+    margin-left: 63px;
+    transition-duration: 500ms;
+}
+
+/* 활성화 상태 */
+.shoes.on {
+    opacity: 1;
+    visibility: visible;
+    position: static;
+}
+.shoes.on > li > img { margin-left: 0; }
+#Simage > li.on { display: block; }
+#Smenu > li.on {
+    font-size: 35px;
+    font-weight: bold;
+    cursor: default;
+    opacity: 1;
+}
+
+
+/* --------------------------------- 액세서리 & 컵 --------------------------------- */
+#accessories > div {
+    display: flex;
+    justify-content: space-between;
+}
+#container {
+    width: 100vw;
+    position: relative;
+}
+/* 배경 */
+#bg_Lbox, #bg_Rbox {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 550px;
+    top: 150px;
+}
+#bg_Lbox {
+    left: -50%;
+    background-color: #747474;
+}
+#bg_Rbox {
+    right: -50%;
+    background-color: #acb2bb;
+}
+
+/* 제품 이미지 */
+#Aimage { padding-top: 20px; }
+.images {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+.images > li {
+    overflow: hidden;
+    width: 290px;
+    height: 215px;
+}
+.images > li > a { display: block; }
+.images > li > a > img {
+    display: block;
+    transition-duration: 500ms;
+}
+/* 이미지 정렬 */
+.images > li:nth-child(1) {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.images > li:nth-child(2) {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.images > li:nth-child(3) {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.images > li:nth-child(4) {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+/* 이미지 모션 설정 */
+.images > li:nth-child(1) > a > img { margin-top: -215px; }
+.images > li:nth-child(2) > a > img { margin-left: 290px; }
+.images > li:nth-child(3) > a > img { margin-left: -290px; }
+.images > li:nth-child(4) > a > img { margin-top: 215px; }
+
+/* 활성화 상태 */
+.images.on {
+    display: grid;
+    opacity: 1;
+    visibility: visible;
+    position: static;
+}
+.images.on > li:nth-child(1) > a > img { margin-top: 0; }
+.images.on > li:nth-child(2) > a > img { margin-left: 0; }
+.images.on > li:nth-child(3) > a > img { margin-left: 0; }
+.images.on > li:nth-child(4) > a > img { margin-top: 0; }
+
+/* 제품 목록 */
+#Amenu { display: flex; }
+#Amenu > li:not(:first-child) { margin-left: 20px; }
+#Amenu > li { cursor: pointer; }
+#Amenu > li:hover > img { opacity: 0.6; }
+
+
+/* --------------------------------- 옷 --------------------------------- */
+#clothes > div {
+    display: flex;
+    justify-content: space-between;
+}
+/* 제품 목록 */
+#Cmenu {
+    font-family: 'G마켓 산스 TTF Medium', sans-serif;
+    font-size: 30px;
+    line-height: 60px;
+}
+#Cmenu > li {
+    display: block;
+    width: 220px;
+    padding-left: 35px;
+    background-color: #acb2bb;
+    border-radius: 0 30px 30px 0;
+    margin-bottom: 10px;
+    
+    opacity: 0.7;
+    cursor: pointer;
+    
+    position: relative;
+    z-index: 5;
+}
+#Cmenu > li:hover { opacity: 1; }
+#Cmenu > li::before {
+    content: "";
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 10px;
+    background-color: #face66;
+}
+/* 제품 이미지 */
+#blackImage { position: relative; }
+#blackImage > li {
+    height: 550px;
+    overflow: hidden;
+}
+#blackImage > li, .Cimage > li {  
+    position: absolute;  
+    opacity: 0;
+    visibility: hidden;
+}
+#blackImage > li > img {
+    transition-duration: 400ms;
+    margin-top: -550px;
+    margin-right: -200px;
+}
+/* 컬러 이미지 */
+.Cimage {
+    position: absolute;
+    bottom: 30px;
+    left: -350px;
+}
+.Cimage > li {
+    width: 580px;
+    overflow: hidden;
+}
+.Cimage > li > a { display: block; }
+.Cimage > li > a > img {
+    display: block;
+    transition-duration: 600ms;
+    margin-left: 580px;
+    margin-top: 130px;
+}
+/* 활설화 상태 */
+#Cmenu > li.on {
+    width: 320px;
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 90px;
+    border-radius: 0 50px 50px 0;
+    opacity: 1;
+    cursor: default;
+}
+#blackImage > li.on, .Cimage > li.on {
+    opacity: 1;
+    visibility: visible;
+    position: static;
+}
+.Cimage > li.on > a > img, #blackImage > li.on > img {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+}
+
+
+/* --------------------------------- 어린이 의류 --------------------------------- */
+#kids > div {
+    display: flex;
+    justify-content: space-between;
+}
+/* 제품 이미지 */
+#Kimage {
+    width: 550px;
+    overflow: hidden;
+}
+#Kimage > ul {
+    display: flex;
+    width: 600%;
+}
+#Kimage > li {
+    width: calc(100% / 6);
+    transition-duration: 4000ms;
+}
+#Kimage > li > a {
+    width: 100%;
+    display: block;
+}
+#Kimage > li > a > img {
+    width: 100%;
+    display: block;
+}
+/* 제품 목록 */
+#Kthumbnail {
+    width: 630px;
+    padding-top: 150px;
+    overflow: hidden;
+    border-top: 1px solid #acb2bb;
+    border-bottom: 1px solid #acb2bb;
+}
+#Kthumbnail > ul {
+    display: flex;
+    width: calc(600% / 3);
+}
+#Kthumbnail > ul > li:not(:first-child) { padding-left: 15px; }
+#Kthumbnail > ul > li {
+    cursor: pointer;
+    width: calc(100% / 6);
+}
+#Kthumbnail > ul > li > img {
+    display: block;
+    width: 100%;
+}
+#Kthumbnail > ul > li:hover { opacity: 0.6; }
+
+
+/* --------------------------------- 미디어 --------------------------------- */
+#media > iframe {
+    width: 960px;
+    height: 540px;
+    margin-left: 120px;
+}
+
+
+/* --------------------------------- SNS --------------------------------- */
+.snsImage { display: flex; }
+.snsImage > li {
+    width: 190px;
+    height: 190px;
+    rotate: 45deg;
+    cursor: pointer;
+
+    position: relative;
+}
+.snsImage > li > a {
+    display: block;
+    background-color: #000;
+}
+.snsImage > li:hover > a > img { opacity: 0.2; }
+.snsImage > li > a > img { display: block; }
+/* 정렬 */
+.snsImage > li:not(:first-child) { margin-left: 90px; }
+.SNS1 {
+    padding-left: 70px;
+    padding-top: 40px
+}
+.SNS2 {
+    padding-left: 210px;
+    margin-top: -45px;
+}
+.SNS3 {
+    padding-left: 350px;
+    margin-top: -45px;
+}
+#sns > div { position: relative; }
+/* 좌우 정렬 */
+.snsL_R > li > a {
+    position: absolute;
+    display: block;
+    width: 325px;
+    height: 325px;
+    rotate: 45deg;
+    background-color: #000;
+}
+.snsL_R > li { position: relative; }
+.snsL_R > li > a > img { display: block; }
+.snsL_R {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;;
+}
+.SNSLeft{
+    bottom: 0;
+    left: -160px;
+}
+.SNSRight {
+    bottom: 125px;
+    right: -160px;
+}
+.SNSLeft:hover > img, .SNSRight:hover > img { opacity: 0.2; }
+/* sns아이콘 */
+.snsImage > li > ul {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+}
+.snsImage > li > ul > li:first-child { padding-top: 50px; }
+.snsImage > li > ul > li > a, .snsL_R > li > ul > li > a { display: block; }
+.snsImage > li > ul > li > a > img {
+    display: block;
+    rotate: -45deg;
+}
+.snsImage > li > ul > li:hover > a > img { opacity: 0.7; }
+.snsImage > li:hover > ul, .snsL_R > li:hover > ul {
+    opacity: 1;
+    visibility: visible;
+}
+/* 좌우 이미지 */
+.snsL_R > li > ul > li > a > img {
+    display: block;
+    width: 150%;
+}
+.snsL_R > li > ul {
+    display: flex;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+}
+.snsL_R > li > ul > li:first-child { margin-right: 70px; }
+.snsL_R > li > ul > li:hover > a > img { opacity: 0.7; }
+.snsL_R:first-child > li > ul {
+    top: -200px;
+    left: -90px;
+}
+.snsL_R:nth-child(2) > li > ul {
+    top: -320px;
+    right: -70px;
+}
+
+
+/* --------------------------------- 푸터 --------------------------------- */
+#footer { background-color: #acb2bb; }
+#footer > div {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+}
+#footer > div > ul {
+    font-family: '나눔고딕', sans-serif;
+    font-size: smaller;
+    line-height: 25px;
+}
+#footer > div > ul > li > strong {
+    font-weight: bold;
+    margin-bottom: 10px;
+    position: relative;
+}
+.T1 > li > strong, .T2 > li > strong {
+    font-weight: bold;
+    margin-bottom: 10px;
+    position: relative;
+}
+.T1 { margin-bottom: 20px; }
