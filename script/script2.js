@@ -200,6 +200,51 @@ $(function () {
 
     });
 
+    // 각 제목 모션
+   
+
+    // about
+    const $aboutContent = $('#aboutContent');
+    const $container = $('.container');
+
+    $window.on('scroll', function () {
+
+        $aboutContent.each(function () {   // 이해 못함
+
+            const scroll_object = $(this).offset().top + $(this).outerHeight();
+            const scroll_window = $(this).scrollTop() + $window.height();
+            
+            if (scroll_window > scroll_object /10) {
+                $(this).animate({ 
+                    'opacity': '1',
+                    'top': '0'
+                }, 600);
+            }
+            
+        });
+        
+        // slik
+        $container.each(function () {
+            
+            const scroll_object = $(this).offset().top + $(this).outerHeight();
+            const scroll_window = $(this).scrollTop() + $window.height();
+
+            if (scroll_window > scroll_object /10) {
+
+                $(this).animate({
+                    'opacity': '1',
+                    'margin-top': '0'
+                }, 600);
+
+            }
+
+        });
+
+    });
+
+    // 요소 위치 찾기
+    function scroll_object() { $(this).offset().top + $(this).outerHeight(); }
+    function scroll_window() { $(this).scrollTop() + $window.height(); }
 
 
 }); // document.onready

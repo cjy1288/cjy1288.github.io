@@ -1,0 +1,1120 @@
+/* --------------------------- PC 버전 --------------------------- */
+@media screen and (min-width: 1424px) {  /* 평균 너비에서 200px 더 늘림 */
+    
+    /* ---------- 공통 요소 ---------- */
+    .container > h2::before {
+        top: -25px;
+        left: -25px;
+        width: 435px;
+        height: 134px;
+    }
+    .container > h2 {
+        width: 420px;
+        margin-bottom: 70px;
+        line-height: 120px;
+        font-size: 50px;
+    }
+
+    /* ---------- 내비게이션 ---------- */
+    /* 사이드 메뉴 버튼 */
+    #sideOpen, #sideClose {
+        display: none;
+    }
+
+    #nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.8);
+        z-index: 100;
+    }
+    #nav > ul {
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+    }
+    #nav > ul > li > a {
+        padding: 0 50px;
+        text-decoration: none;
+        color: #729dcc;
+        display: block;
+        text-align: center;
+        line-height: 50px;
+        font-family: 'Cafe24 Ohsquare', sans-serif;
+        font-weight: 600;
+    
+        /* 가상 요소의 기준 */
+        position: relative;
+    }
+    #nav > ul > li:hover > a {
+        color: #2e4a73;
+    }
+    
+    /* 가상 요소로 목록 아래에 막대기 추가 */
+    #nav > ul > li > a::after {
+        content: "";
+    
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    
+        width: 0;
+        height: 3px;
+        background-color: #face66;
+        transition-duration: 200ms;
+    }
+    
+    #nav > ul > li > a:hover::after {
+        width: 80%;
+    }
+
+    /* ---------- 페이지 첫 화면  ---------- */
+    #mainView > div {
+        width: 1550px;
+        height: 800px;
+    }
+    #profileBox {
+        width: 1500px;
+        height: 750px;
+    }
+    #mainView > div::after {
+        background-image: url('../images/border1.png');
+
+        width: 1520px;
+        height: 770px;
+    }
+    #profileBox > h1, #profileBox > h2 {
+        left: 70px;
+    }
+    #profileBox > h1 {
+        font-size: 150px;
+        top: 70px;
+    }
+    #profileBox > h2 {
+        font-size: 100px;
+        bottom: 100px;
+    }
+    #profileBox > img {
+        right: -20px;
+        bottom: -25px;
+    }
+
+    /* ---------- about  ---------- */
+    #aboutContent {
+        display: flex;
+    }
+    #aboutContent > img {
+        max-height: 570px;
+        border-radius: 10px;
+        margin-right: 25px;
+        box-shadow: 25px 25px 0 0 #2e4a73;
+    }
+    #aboutContent > div {
+        padding-left: 70px;
+    }
+    .aboutText {
+        padding-top: 50px;
+    }
+    .aboutText > h3 {
+        font-size: 33px;
+        margin-bottom: 20px;
+    }
+    .aboutText > ul, .aboutText > p {
+        font-size: 27px;
+        line-height: 35px;
+    }
+    .aboutText > p:not(:last-child) {
+        margin-bottom: 35px;
+    }
+    .aboutText:last-child > ul {
+        line-height: 50px;
+    }
+
+    /* 버튼 */
+    #aboutContent > button {
+        display: none;
+    }
+    
+    
+    /* ---------- skill  ---------- */
+    .Scontent {
+        width: 1300px;
+    }
+    .Scontent > ul {
+        display: flex;
+    }
+    .container > h2 + div {
+        margin-bottom: 50px;
+    }
+    .Scontent > h3 {
+        font-size: 25px;
+        line-height: 50px;
+        padding-left: 15px;
+        border-radius: 10px 10px 0 0;
+    }
+    .Scontent > ul {
+        height: 220px;
+        gap: 50px;
+        border-radius: 0 0 10px 10px;
+    }
+    .Scontent > ul > li {
+        padding-top: 30px;
+    }
+
+
+    /* ---------- web  ---------- */
+    .Wcontent {
+        display: flex;
+    }
+    .Wcontent > div:first-child {
+        border-radius: 10px;
+        width: 650px;
+        margin-right: 50px;
+        padding: 50px;
+    }
+    .Wcontent > div > p {
+        margin: 80px 0;
+    }
+    .Wcontent > div:first-child > h3 {
+        font-size: 50px;
+        line-height: 60px;
+    }
+    .Wcontent > div:first-child > p {
+        font-size: 22px;
+        font-weight: 300;
+        line-height: 35px;
+    }
+    /* 버튼 */
+    .webButton > a {
+        font-size: 23px;
+        line-height: 30px;
+        padding: 20px 40px;
+    }   
+    .webButton > a:first-child {
+        margin-right: 50px;
+    }
+    /* 작업물 화면 이미지 */
+    .Wcontent > a > img {
+        border: 20px solid #2e4a73;
+        border-bottom: 50px solid #2e4a73;
+        border-radius: 5px;
+    }
+    .Wcontent > a::before {
+        width: 120px;
+        height: 80px;    
+    }
+    .Wcontent > a::after {
+        width: 350px;
+        height: 20px;    
+    }
+
+    /* ---------- design  ---------- */
+    /* 오버레이 레이어 */
+    #overlay > button {
+        background-size: 60%;
+        right: 30px;
+        top: 30px;    
+    }
+    #overlay > img {
+        max-width: 80%;
+        max-height: 80%;    
+    }
+    #overlay > p {
+        font-size: 20px;
+        line-height: 30px;
+        margin-top: 50px;    
+    }
+    /* 작업물 컨텐츠 */
+    #Dcontent {
+        width: 1100px;
+    }
+
+    .designImage > li > a:hover { overflow: hidden; }
+    .designImage > li > a:hover > img {
+        opacity: 0.5;
+        scale: 1.2;
+    }
+    /* 버튼 */
+    #prev, #next {
+        position: absolute;
+    }
+    #prev {
+        left: -190px;
+    }
+    #next {
+        right: -190px;
+    }
+
+    /* 디자인 작업물 정보 */
+    .designImage > li > div {
+        font-size: 18px;
+        line-height: 25px;
+        padding: 15px;
+        font-weight: 400;
+    }
+    
+
+    /* ---------- contact  ---------- */
+    #Scontent {
+        display: flex;
+        margin-left: 100px;
+    }
+    #Scontent > div {
+        margin-right: 430px;
+    } 
+    .boxText {
+        width: 500px;
+        height: 400px;
+        border-radius: 15px;
+        margin-top: 150px;
+        margin-left: -100px;
+    }
+    .boxText > p {
+        font-size: 25px;
+        line-height: 60px;    
+    }
+    .boxText > p:first-child {
+        top: 220px;
+        left: 70px; 
+    }
+    .boxText > p:last-child {
+        top: 270px;
+        right: 70px;
+    }
+    .boxText::before {
+        top: 180px;
+        left: 40px;    
+    }
+    .boxText::after {
+        bottom: 35px;
+        right: 40px;    
+    }
+    /* 연락처 */
+    #contactButton > li {
+        width: 500px;
+        font-size: 25px;
+        line-height: 55px;
+        padding-left: 40px;    
+    }
+    #contactButton > li:not(:last-child) {
+        margin-bottom: 75px;
+    }
+    #contactButton > li > button {
+        width: 90px;
+        height: 55px;    
+    }
+    #contactButton > li::before {
+        left: -180px;
+        width: 110px;
+        height: 110px;    
+    }
+    /* 푸터 */
+    #contact > p {
+        font-size: 20px;
+        line-height: 50px;    
+    }
+
+    /* 클립보드 복사 확인 메시지 */
+    #alert {
+        width: 600px;
+        font-size: 30px;
+        padding: 70px 100px;
+        border: 2px solid #233651;
+    }
+
+}
+
+
+/* --------------------------- 태블릿 버전 --------------------------- */
+@media screen and (min-width: 868px) and (max-width: 1423px) {
+    
+    /* ---------- 공통 요소 ---------- */
+    .container > h2::before {
+        top: -15px;
+        left: -15px;
+        width: 435px;
+        height: 134px;
+        background-size: 60%;
+    }
+    .container > h2 {
+        width: 252px;
+        margin-bottom: 40px;
+        line-height: 72px;
+        font-size: 25px;
+    }
+
+
+    /* ---------- 내비게이션 ---------- */
+    /* 사이드 메뉴 버튼 */
+    #sideOpen, #sideClose {
+        display: none;
+    }
+    #nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.8);
+        z-index: 100;
+    }
+    #nav > ul {
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+    }
+    #nav > ul > li > a {
+        padding: 0 50px;
+        text-decoration: none;
+        color: #729dcc;
+        display: block;
+        text-align: center;
+        line-height: 50px;
+        font-family: 'Cafe24 Ohsquare', 'sans-serif';
+        font-weight: 600;
+    
+        /* 가상 요소의 기준 */
+        position: relative;
+    }
+    #nav > ul > li:hover > a {
+        color: #2e4a73;
+    }
+    
+    /* 가상 요소로 목록 아래에 막대기 추가 */
+    #nav > ul > li > a::after {
+        content: "";
+    
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    
+        width: 0;
+        height: 3px;
+        background-color: #face66;
+        transition-duration: 200ms;
+    }
+    
+    #nav > ul > li > a:hover::after {
+        width: 80%;
+    }
+
+
+    /* ---------- 페이지 첫 화면  ---------- */
+    #mainView > div {
+        width: 930px;
+        height: 480px;
+    }
+    #profileBox {
+        width: 900px;
+        height: 450px;
+    }
+    #mainView > div::after {
+        background-image: url('../images/border1.png');
+
+        width: 1520px;
+        height: 770px;
+        background-size: 60%;
+    }
+    #profileBox > h1, #profileBox > h2 {
+        left: 60px;
+    }
+    #profileBox > h1 {
+        font-size: 90px;
+        top: 60px;
+    }
+    #profileBox > h2 {
+        font-size: 60px;
+        bottom: 40px;
+    }
+    #profileBox > img {
+        right: -20px;
+        bottom: -25px;
+        width: 45%;
+    }
+
+
+    /* ---------- about  ---------- */
+    #aboutContent {
+        display: flex;
+    }
+    #aboutContent > img {
+        max-height: 342px;
+        border-radius: 5px;
+        margin-right: 15px;
+        box-shadow: 15px 15px 0 0 #2e4a73;
+    }
+    #aboutContent > div {
+        padding-left: 70px;
+    }
+    .aboutText {
+        padding-top: 40px;
+    }
+    .aboutText > h3 {
+        font-size: 20px;
+        margin-bottom: 18px;
+    }
+    .aboutText > ul, .aboutText > p {
+        font-size: 17px;
+        line-height: 30px;
+    }
+    .aboutText > p:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    .aboutText:last-child > ul {
+        line-height: 30px;
+    }
+
+    /* 버튼 */
+    #aboutContent > button {
+        display: none;
+    }
+            
+
+    /* ---------- skill  ---------- */
+    .Scontent {
+        width: 780px;
+    }
+    .Scontent > ul {
+        display: flex;
+    }
+    .container > h2 + div {
+        margin-bottom: 30px;
+    }
+    .Scontent > h3 {
+        font-size: 15px;
+        line-height: 30px;
+        padding-left: 10px;
+        border-radius: 10px 10px 0 0;
+    }
+    .Scontent.S1 > ul {
+        padding-left: 120px;
+    }
+    .Scontent.S2 > ul {
+        padding-left: 90px;
+    }
+    .Scontent > ul {
+        height: 132px;
+        border-radius: 0 0 10px 10px;
+        box-sizing: border-box;
+    }
+    .Scontent > ul > li {
+        padding-top: 18px;
+        margin-left: -30px;
+    }
+    .Scontent > ul > li > img {
+        width: 60%;
+    }
+
+
+    /* ---------- web  ---------- */
+    .Wcontent {
+        display: flex;
+    }
+    .Wcontent > div:first-child {
+        border-radius: 5px;
+        width: 390px;
+        margin-right: 30px;
+        padding: 30px;
+    }
+    .Wcontent > div > p {
+        margin: 40px 0;
+    }
+    .Wcontent > div:first-child > h3 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .Wcontent > div:first-child > p {
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 30px;
+    }
+    /* 버튼 */
+    .webButton > a {
+        font-size: 14px;
+        line-height: 30px;
+        padding: 0 25px;
+        white-space: nowrap;
+    }   
+    .webButton > a:first-child {
+        margin-right: 30px;
+    }
+    /* 작업물 화면 이미지 */
+    .Wcontent > a > img {
+        max-width:480px;
+        border: 15px solid #2e4a73;
+        border-bottom: 35px solid #2e4a73;
+        border-radius: 5px;
+    }
+    .Wcontent > a::before {
+        width: 80px;
+        height: 70px;    
+    }
+    .Wcontent > a::after {
+        width: 210px;
+        height: 12px;    
+    }
+
+    /* ---------- design  ---------- */
+    /* 오버레이 레이어 */
+    #overlay > button {
+        background-size: 60%;
+        right: 30px;
+        top: 30px;    
+    }
+    #overlay > img {
+        max-width: 60%;
+        max-height: 60%;    
+    }
+    #overlay > p {
+        font-size: 20px;
+        line-height: 30px;
+        margin-top: 80px;    
+    }
+    /* 작업물 컨텐츠 */
+    #Dcontent {
+        width: 660px;
+        height: 360px;
+    }
+    /* 크기 조정 */
+    .D1 > li > a > img {
+        width: 330px;
+    }
+    .D2 > li:not(:last-child) > a > img {
+        width: 330px;
+    }
+    .D2 > li:last-child > a > img {
+        width: 660px;
+    }
+    .D3 > li:not(:first-child) > a > img {
+        width: 443px;
+    }
+    .D3 > li:first-child > a > img {
+        width: 217px;
+    }
+
+    /* 버튼 */
+    #prev, #next {
+        position: absolute;
+    }
+    #prev {
+        left: -116px;
+        background-size: 60%;
+    }
+    #next {
+        right: -152px;
+        background-size: 60%;
+    }
+
+    /* 디자인 작업물 정보 */
+    .designImage > li > div {
+        font-size: 13px;
+        line-height: 20px;
+        padding: 7px;
+        font-weight: 300;
+    }
+    
+
+    /* ---------- contact  ---------- */
+    #Scontent {
+        display: flex;
+    }
+    #Scontent > div {
+        margin-right: 150px;
+    }
+    #Scontent > div > img {
+        max-width: 180px;
+    }
+    .boxText {
+        width: 300px;
+        height: 240px;
+        border-radius: 10px;
+        margin-top: 100px;
+        margin-left: -60px;
+    }
+    .boxText > p {
+        font-size: 16px;
+        line-height: 20px;    
+    }
+    .boxText > p:first-child {
+        top: 140px;
+        left: 42px; 
+    }
+    .boxText > p:last-child {
+        top: 170px;
+        right: 42px;
+    }
+    .boxText::before {
+        top: 113px;
+        left: 24px;    
+        background-size: 60%;
+    }
+    .boxText::after {
+        bottom: 10px;
+        right: 24px;    
+        background-size: 60%;
+    }
+    /* 연락처 */
+    #contactButton > li {
+        width: 300px;
+        font-size: 16px;
+        line-height: 33px;
+        padding-left: 30px;    
+    }
+    #contactButton > li:not(:last-child) {
+        margin-bottom: 45px;
+    }
+    #contactButton > li > button {
+        width: 54px;
+        height: 33px;    
+    }
+    #contactButton > li::before {
+        left: -110px;
+        width: 110px;
+        height: 110px; 
+        background-size: 60%;   
+    }
+    /* 푸터 */
+    #contact > p {
+        font-size: 14px;
+        line-height: 40px;    
+    }
+    /* 클립보드 복사 확인 메시지 */
+    #alert {
+        width: 480px;
+        font-size: 25px;
+        padding: 50px 60px;
+        border: 2px solid #233651;
+    }
+    
+}
+
+
+/* --------------------------- 모바일 버전 --------------------------- */
+@media screen and (max-width: 867px) {   /* 평균 너비에서 100px 더 늘림 */
+    
+    /* ---------- 공통 요소 ---------- */
+    .container > h2::before {
+        top: -15px;
+        left: -15px;
+        width: 400px;
+        height: 134px;
+        background-size: 60%;
+    }
+    .container > h2 {
+        width: 232px;
+        margin-bottom: 40px;
+        line-height: 65px;
+        font-size: 25px;
+    }
+
+    /* ---------- 내비게이션 ---------- */
+    /* 사이드바로 만들기 */
+    #sideOpen, #sideClose {
+        border: none;
+        background-color: transparent;
+        padding: 0;
+
+        background-repeat: no-repeat;
+        background-size: 70%;
+        width: 50px;
+        height: 50px;
+        right: 20px;
+        top: 20px;
+
+        z-index: 10;
+        cursor: pointer;
+    }
+    #sideOpen > span, #sideClose > span {
+        position: absolute;
+        display: block;
+        width: 1px; height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+    }
+    #sideOpen {
+        position: fixed;
+        background-image: url('../images/menuButton.png');
+    }
+    #sideClose {
+        position: absolute;
+        background-image: url('../images/closeButton2.png');
+    }
+
+    #nav {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 300px;
+        background-color: rgba(255, 255, 255, 0.8);
+        z-index: 100;
+
+        right: -300px;
+    }
+    #nav > ul {
+        justify-content: center;
+        padding-top: 80px;
+    }
+    #nav > ul > li > a {
+        padding: 0 40px;
+        text-decoration: none;
+        color: #729dcc;
+        display: block;
+        text-align: left;
+        line-height: 50px;
+        font-size: 30px;
+        font-family: 'Cafe24 Ohsquare', 'sans-serif';
+        font-weight: 600;
+        margin-bottom: 35px;
+    
+        /* 가상 요소의 기준 */
+        position: relative;
+    }
+    #nav > ul > li:hover > a {
+        color: #2e4a73;
+    }
+
+    /* ---------- 페이지 첫 화면  ---------- */
+    #mainView > div {
+        width: 500px;
+        height: 520px;
+    }
+    #profileBox {
+        width: 460px;
+        height: 480px;
+    }
+    #mainView > div::after {
+        background-image: url('../images/border1-2.png');
+
+        width: 480px;
+        height: 500px;
+        background-size: contain;
+    }
+    #profileBox > h1, #profileBox > h2 {
+        left: 20px;
+    }
+    #profileBox > h1 {
+        font-size: 65px;
+        top: 30px;
+    }
+    #profileBox > h2 {
+        font-size: 50px;
+        bottom: 50px;
+    }
+    #profileBox > img {
+        right: -40px;
+        bottom: -10px;
+        width: 75%;
+    }
+
+
+    /* ---------- about  ---------- */
+    #aboutContent > img {
+        max-height: 250px;
+        border-radius: 3px;
+        box-shadow: 10px 10px 0 #2e4a73;
+        margin-left: 10px;
+    }
+    #aboutContent > div {
+        padding-left: 10px;
+    }
+    .aboutText {
+        width: 200px;
+        padding-top: 30px;
+        margin-top: 50px;
+    }
+    .aboutText > h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .aboutText > ul, .aboutText > p {
+        font-size: 16px;
+        line-height: 25px;
+    }
+    .aboutText > p:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    .aboutText:last-child > ul {
+        line-height: 30px;
+    }
+    
+    /* 버튼 */
+    #aboutContent > button {
+        position: absolute;
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        display: block;
+        margin-top: 50px;
+        
+        width: 15px;
+        height: 21px;
+        cursor: pointer;
+    }
+    #aboutContent > button > span {
+        position: absolute;
+        display: block;
+        width: 1px; height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+    }
+    #aboutPrev {
+        background: url('../images/button_icon2-2.png') no-repeat;
+        right: 50px;
+    }
+    #aboutNext {
+        background: url('../images/button_icon2.png') no-repeat;
+        right: 0;
+    }
+    
+    .aboutText {
+        display: none;
+    }
+    .aboutText.on {
+        display: block;
+    }
+    #aboutContent > button.on {
+        width: 10px;
+        opacity: 0.6;
+    }
+
+    /* ---------- skill  ---------- */
+    .Scontent {
+        width: 380px;
+    }
+    .container > h2 + div {
+        margin-bottom: 20px;
+    }
+    .Scontent > h3 {
+        font-size: 16px;
+        line-height: 30px;
+        padding-left: 20px;
+        border-radius: 5px 5px 0 0;
+    }
+    .Scontent > ul {
+        height: 260px;
+        border-radius: 0 0 5px 10px;
+    }
+    .Scontent > ul > li {
+        padding-top: 15px;
+    }
+    .Scontent > ul > li > img {
+        height: 96px;
+        display: block;
+    }
+    /* 정렬 */
+    .Scontent > ul {
+        display: grid;
+        grid-template-columns: 136px 96px;
+    }
+    .Scontent > li:nth-child(1) {
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    .Scontent > li:nth-child(2) {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    .Scontent > li:nth-child(3) {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .Scontent > li:nth-child(4) {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    .S1 > ul > li:nth-child(3) > img, .S1 > ul > li:nth-child(4) > img {
+        margin-left: -35px;
+    }
+
+    /* ---------- web  ---------- */
+    .Wcontent > div {
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 30px;
+    }
+    .Wcontent > div:first-child {
+        border-radius: 5px;
+        width: 380px;
+        padding: 20px 30px;
+    }
+    .Wcontent > div > p {
+        margin: 20px 0;
+    }
+    .Wcontent > div:first-child > h3 {   /* 제목 <br> 제거하기 */
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .Wcontent > div:first-child > p {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 20px;
+    }
+    /* 버튼 */
+    .webButton > a {
+        font-size: 14px;
+        line-height: 30px;
+        padding: 0 25px;
+        white-space: nowrap;
+    }   
+    .webButton > a:first-child {
+        margin-right: 30px;
+    }
+    /* 작업물 화면 이미지 */
+    .Wcontent > a {
+        display: block;
+    }
+    .Wcontent > a > img {
+        display: block;
+        max-width: 380px;
+        border: 10px solid #2e4a73;
+        border-bottom: 20px solid #2e4a73;
+        border-radius: 5px;
+    }
+    .Wcontent > a::before {
+        width: 65px;
+        height: 40px;    
+        bottom: -30px;
+    }
+    .Wcontent > a::after {
+        width: 180px;
+        height: 8px;    
+        bottom: -30px;
+    }
+
+    /* ---------- design  ---------- */
+    /* 오버레이 레이어 */
+    #overlay > button {
+        background-size: 50%;
+        right: 20px;
+        top: 25px;    
+    }
+    #overlay > img {
+        max-width: 60%;
+        max-height: 60%;    
+    }
+    #overlay > p {
+        font-size: 18px;
+        line-height: 30px;
+        margin-top: 90px;    
+    }
+    /* 작업물 컨텐츠 */
+    #Dcontent {
+        width: 480px;
+    }
+    
+    /* 크기 조정 */
+    .D1 > li > a > img {
+        width: 240px;
+    }
+    .D2 > li:not(:last-child) > a > img {
+        width: 240px;
+    }
+    .D2 > li:last-child > a > img {
+        width: 480px;
+    }
+    .D3 > li:not(:first-child) > a > img {
+        width: 324px;
+    }
+    .D3 > li:first-child > a > img {
+        width: 157px;
+    }
+    
+    /* 버튼 */
+    #prev, #next {
+        background-size: 50%;
+        margin-left: 100px;
+    }
+
+    /* 디자인 작업물 정보 */
+    .designImage > li > div {
+        font-size: 8px;
+        line-height: 13px;
+        padding: 5px;
+        font-weight: 200;
+    }
+
+    
+    /* ---------- contact  ---------- */
+    #Scontent > div {
+        margin: 0 auto;
+    }
+    #Scontent > div > img {
+        left: 115px;
+        max-width: 130px;
+        margin-top: -75px;
+    }
+    .boxText {
+        width: 250px;
+        height: 180px;
+        border-radius: 5px;
+        margin: 0 auto;
+        margin-top: 100px;
+    }
+    .boxText > p {
+        font-size: 14px;
+        line-height: 20px;    
+    }
+    .boxText > p:first-child {
+        top: 90px;
+        left: 42px; 
+    }
+    .boxText > p:last-child {
+        top: 120px;
+        right: 42px;
+    }
+    .boxText::before {
+        top: 70px;
+        left: 20px;    
+        background-size: 50%;
+    }
+    .boxText::after {
+        bottom: 5px;
+        right: 0;    
+        background-size: 50%;
+    }
+    /* 연락처 */
+    #contactButton {
+        margin-top: 30px;
+    }
+    #contactButton > li {
+        width: 300px;
+        font-size: 15px;
+        line-height: 33px;
+        padding-left: 25px; 
+        margin-left: 60px;   
+    }
+    #contactButton > li:not(:last-child) {
+        margin-bottom: 25px;
+    }
+    #contactButton > li > button {
+        width: 54px;
+        height: 33px;    
+    }
+    #contactButton > li::before {
+        left: -60px;
+        width: 110px;
+        height: 110px; 
+        background-size: 40%; 
+        top: 0;  
+    }
+    /* 푸터 */
+    #contact > p {
+        font-size: 13px;
+        line-height: 30px;    
+    }
+    
+    /* 클립보드 복사 확인 메시지 */
+    #alert {
+        font-size: 20px;
+        padding: 30px 40px;
+        border: 1px solid #233651;
+    }
+}

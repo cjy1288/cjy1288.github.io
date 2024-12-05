@@ -82,6 +82,9 @@ body {
 #aboutContent {
     justify-content: center;   
     position: relative;
+
+    opacity: 0;
+    top: 100px;
 }
 #aboutContent > img {
     position: relative;
@@ -107,6 +110,9 @@ body {
 /* --------------------------- skill --------------------------- */
 .Scontent {
     margin: 0 auto;
+
+    margin-top: 50px;
+    opacity: 0;
 }
 .Scontent > h3 {
     width: 100%;
