@@ -5,7 +5,6 @@
     position: relative;
 
 }
-/* html { scroll-behavior: smooth; } */ /* 휠로 페이지 스크롤 시 딜레이 됨 */
 
 /* 전체 공통 설정 */
 html, body {

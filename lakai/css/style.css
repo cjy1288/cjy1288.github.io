@@ -613,10 +613,9 @@ body {
 
 
 /* --------------------------------- 액세서리 & 컵 --------------------------------- */
-#accessories > div {
-    display: flex;
-    justify-content: space-between;
-}
+#accessories { margin-bottom: 360px; }
+#accessories > div { display: flex; }
+#accessories > div > div:first-child { margin-right: 20px; }
 #container {
     width: 100vw;
     position: relative;
