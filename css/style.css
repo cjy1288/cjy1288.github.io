@@ -159,7 +159,8 @@ body {
 /* 작업물 화면 이미지 */
 .Wcontent > a {
     position: relative;
-
+}
+.Wcontent > a > img {
     cursor: pointer;
 }
 .Wcontent > a::before {
