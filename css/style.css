@@ -160,7 +160,7 @@ body {
 .Wcontent > a {
     position: relative;
 
-    cursor: default;
+    cursor: pointer;
 }
 .Wcontent > a::before {
     content: "";
