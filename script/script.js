@@ -48,18 +48,15 @@ $(function () {
 
     // 키보드 이벤트
     window.addEventListener('keypress', function (event) {
-        // event.preventDefault();
 
-        if ($html.is(':animated')) return; // 이벤트 연달아 발생X
+        if ($html.is(':animated')) return;
         
-        // 다시 확인하기
-
     }, { passive: false });
 
     
     // 공통 기능 //
     
-    // 내비게이션 페이지 스크롤     // 클릭 후 휠 사용 시 문제 발생
+    // 내비게이션 페이지 스크롤
     console.log('스크롤 페이지 높이: ' + $window.scrollTop());
     let $navList = $('#nav > ul > li > a');
     
@@ -69,9 +66,6 @@ $(function () {
             scrollTop: $($.attr(this, 'href')).offset().top
         });
         return false
-
-        // pageIndex = Math.round($window.scrollTop() / windowHeight);
-        // $html.animate({ scrollTop: pageIndex * windowHeight }, 10);
 
     });
 
@@ -183,23 +177,5 @@ $(function () {
         $aboutText.eq(index).addClass('on');
 
     });
-
-
-    // 등장 모션 //
-    // 첫 화면 페이지
-    window.addEventListener('load', function () {
-        const $profileBox= $('#profileBox');
-
-        $profileBox.animate({   // 중심점 바꾸기
-            width: '0',
-            height: '0'
-        }, 1).animate({   // 뷰포트 너비별로 수치 다르게 하기
-            width: '92%',
-            height: '92%'
-        }, 400);
-
-    });
-
-
 
 }); // document.onready
