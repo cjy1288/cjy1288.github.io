@@ -1,21 +1,5 @@
 $(function () {
 
-    // 첫 이미지
-    const $bigImages = $('#bigImage');
-    const $bigImage = $('#bigImage > li');
-    // window.addEventListener('load', function () {
-
-    //     $bigImage.addClass('on');
-
-    // }, function () {
-
-    //     $bigImages.css('transfrom', 'scale(0)').css('opasity', '0');
-
-    // });
-
-    // 텍스트 모션
-
-
     // TOP 버튼
     $('#topButton').on('click', function () {
 
@@ -104,13 +88,13 @@ $(function () {
     });
 
     // 이미지 슬라이드
-    const $imageList = $('#imageSlide > div > ul');
+    const $imageList = $('#imageSlide > ul');
 
     const imageLength = $imageList.children().length;
     
     let timerId = window.setInterval(slideImage, INTERVAL);
 
-    $('#imageSlide > div').on({
+    $('#imageSlide').on({
 
         mouseenter: function () {
             window.clearInterval(timerId);
@@ -199,10 +183,6 @@ $(function () {
 
     });
     
-    // 배경 요소 추가
-    const $bgRbox = $('<div></div>').attr('id', 'bg_Lbox').appendTo('#container');
-    const $bgLbox = $('<div></div>').attr('id', 'bg_Rbox').appendTo('#container');
-
 
     // 옷 탭 기능
     const $Cmenu = $('#Cmenu > li');
@@ -241,18 +221,6 @@ $(function () {
         let K_ItimerId = window.setInterval(K_IslideImage, INTERVAL);
     }, INTERVAL);
 
-    // $Kthumbnail.parent().on({
-
-    //     mouseenter: function () {
-    //         window.clearInterval(KtimerId);
-    //         window.clearInterval(K_ItimerId); // 적용 안됨
-    //     },
-    //     mouseleave: function () {
-    //         KtimerId = window.setInterval(KslideImage, INTERVAL);
-    //         K_ItimerId = window.setInterval(K_IslideImage, INTERVAL);
-    //     }
-
-    // });
 
     // 슬라이드 함수
     function KslideImage() {
@@ -270,18 +238,5 @@ $(function () {
         i++;
         i %= KimageLength;
     }
-    // 탭 기능
-    // $Kmenu.on('click', function () {
-
-    //     if ($(this).is('.on')) return;
-
-    //     $(this).addClass('on').siblings().removeClass('on');
-    //     $Kcontent.removeClass('on');
-
-    //     const index = $(this).attr('data-index');
-
-    //     $Kcontent.eq(index).addClass('on');
-
-    // });
-
+    
 });

@@ -12,7 +12,7 @@ body {
 }
 
 /* 제목 폰트 설정 */
-.page > h2 {
+.page > h2, #accessories > h2 {
     font-family: '태나다체', sans-serif;
     font-size: 70px;
     font-weight: 900;
@@ -42,61 +42,6 @@ body {
     color: #face66;
     background-color: #a5adb6;
 }
-
-
-/* --------------------------------- 첫 등장 화면 --------------------------------- */
-#bigImage {
-    position: relative;
-    width: 1842px;
-    margin: 0 auto;
-}
-#bigImage > li {
-    position: absolute;
-    z-index: 100;
-    overflow: hidden;
-
-    opacity: 0;
-    visibility: hidden;
-}
-#bigImage > li > img {
-    display: block;
-}
-#bigImage > li:nth-child(1) {
-    top: 0;
-    left: 18.3%;
-}
-#bigImage > li:nth-child(2) {
-    top: 0;
-    left: 46.8%;
-    width: 1026px;
-}
-#bigImage > li:nth-child(3) {
-    top: 550px;
-    left: 50%;
-    transform: translatex(-50%);
-    height: 416px;
-}
-/* 모션*/
-#bigImage > li:nth-child(1) > img {
-    margin-left: -930px;
-    transition-duration: 400ms;
-}
-#bigImage > li:nth-child(2) > img {
-    margin-left: 1026px;
-    transition-duration: 600ms;
-}
-#bigImage > li:nth-child(3) > img {
-    margin-top: 416px;
-    transition-duration: 800ms;
-}
-/* 활성화 */
-#bigImage > li.on {
-    opacity: 1;
-    visibility: visible;
-}
-#bigImage > li:nth-child(1).on > img { margin-left: 0; }
-#bigImage > li:nth-child(2).on > img { margin-left: 0; }
-#bigImage > li:nth-child(3).on > img { margin-top: 0; }
 
 
 /* --------------------------------- 공지사항 --------------------------------- */
@@ -364,23 +309,21 @@ body {
 
 
 /* --------------------------------- 이미지 슬라이드 --------------------------------- */
-#imageSlide { margin-top: 190px; }
-#imageSlide > div {
-    width: 1200px;
+#imageSlide {
+    margin-top: 190px;
     position: relative;
-
     overflow: hidden;
 }
-#imageSlide > div > ul {
+#imageSlide > ul {
     display: flex;
     width: 300%;
 }
-#imageSlide > div > ul > li { width: calc(100% / 3); }
-#imageSlide > div > ul > li > a {
+#imageSlide > ul > li { width: calc(100% / 3); }
+#imageSlide > ul > li > a {
     width: 100%;
     display: block;
 }
-#imageSlide > div > ul > li > a > img { display: block; }
+#imageSlide > ul > li > a > img { display: block; }
 /* 버튼 */
 #slidePrev, #slideNext {
     background-color: transparent;
@@ -399,7 +342,7 @@ body {
     transition-duration: 100ms;
 }
 #slidePrev:hover, #slideNext:hover { opacity: 1; }
-#imageSlide > div > button > span {
+#imageSlide > button > span {
     position: absolute;
     display: block;
     width: 1px; height: 0;
@@ -613,32 +556,39 @@ body {
 
 
 /* --------------------------------- 액세서리 & 컵 --------------------------------- */
-#accessories { margin-bottom: 360px; }
-#accessories > div { display: flex; }
-#accessories > div > div:first-child { margin-right: 20px; }
-#container {
+#accessories > h2 {
+    width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 120px;
+}
+#accessories {
+    margin-bottom: 360px;
     width: 100vw;
+    margin-left: 50%;
+    transform: translatex(-50%);
+}
+#accessories > div {
+    width: 100%; 
+    display: flex;
+}
+#accessories > div > div {
+    width: 50%;
     position: relative;
+    padding: 40px 0;
 }
-/* 배경 */
-#bg_Lbox, #bg_Rbox {
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 550px;
-    top: 150px;
-}
-#bg_Lbox {
-    left: -50%;
+#accessories > div > div:first-child {
     background-color: #747474;
 }
-#bg_Rbox {
-    right: -50%;
+#accessories > div > div:last-child {
     background-color: #acb2bb;
 }
 
 /* 제품 이미지 */
-#Aimage { padding-top: 20px; }
+#Aimage {
+    position :absolute;
+    right: 20px;
+    padding-top: 10px;
+}
 .images {
     opacity: 0;
     visibility: hidden;
@@ -698,7 +648,10 @@ body {
 .images.on > li:nth-child(4) > a > img { margin-top: 0; }
 
 /* 제품 목록 */
-#Amenu { display: flex; }
+#Amenu {
+    display: flex;
+    padding-left: 20px;
+}
 #Amenu > li:not(:first-child) { margin-left: 20px; }
 #Amenu > li { cursor: pointer; }
 #Amenu > li:hover > img { opacity: 0.6; }
@@ -824,7 +777,7 @@ body {
 /* 제품 목록 */
 #Kthumbnail {
     width: 630px;
-    padding-top: 150px;
+    padding-top: 130px;
     overflow: hidden;
     border-top: 1px solid #acb2bb;
     border-bottom: 1px solid #acb2bb;
@@ -835,14 +788,13 @@ body {
 }
 #Kthumbnail > ul > li:not(:first-child) { padding-left: 15px; }
 #Kthumbnail > ul > li {
-    cursor: pointer;
     width: calc(100% / 6);
 }
 #Kthumbnail > ul > li > img {
     display: block;
     width: 100%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
-#Kthumbnail > ul > li:hover { opacity: 0.6; }
 
 
 /* --------------------------------- 미디어 --------------------------------- */
